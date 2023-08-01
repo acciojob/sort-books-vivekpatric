@@ -9,7 +9,7 @@ export function fetchBooks() {
     try {
       const response = await fetch(
         "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=LVtPAnTjKn2fPpu3uU8G6ucbbAaQqCGV"
-      );
+      ); 
       const data = await response.json();
       const books = data.results.books;
       dispatch({ type: FETCH_BOOKS_SUCCESS, payload: books });
